@@ -1,4 +1,4 @@
-echo -e \e"36m installing nginx \e[0m"
+echo -e "\e[36m installing nginx \e[0m"
 dnf install nginx -y
 cd /etc/nginx/default.d/expense.conf
 rm -rf /usr/share/nginx/html/*
