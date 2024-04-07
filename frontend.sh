@@ -2,7 +2,7 @@ log_file=/tmp/expense.log
 color="\e[35m"
 echo -e "${color} installing nginx \e[0m"
 dnf install nginx -y &>>$log_file
-if [ $? -eq]; then
+if [ $? -eq 0]; then
   echo -e "\e[32m Success \e[0m"
 else
   echo -e "\e[31m FAIL \e[0m"
