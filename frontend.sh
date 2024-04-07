@@ -2,6 +2,11 @@ log_file=/tmp/expense.log
 color="\e[35m"
 echo -e "${color} installing nginx \e[0m"
 dnf install nginx -y &>>$log_file
+if [ $? -eq]; then
+  echo -e "\e[32m Success \e[0m"
+else
+  echo -e "\e[31m FAIL \e[0m"
+fi
 echo -e "${color} copying expence config file \e[0m"
 cd /etc/nginx/default.d/expense.conf &>>$log_file
 echo -e "${color} removing older files \e[0m"
